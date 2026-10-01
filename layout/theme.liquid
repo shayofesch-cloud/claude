@@ -15,18 +15,40 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {%- liquid
+      # Brand without the letter spacing used in the store name ("S H A Y O" -> "SHAYO")
+      assign brand_name = shop.name | remove: ' '
+      assign page_title_upcase = page_title | upcase
+      assign brand_name_upcase = brand_name | upcase
+
+      # Fallback descriptions for pages saved without one in the admin
+      assign meta_description = page_description
+      if meta_description == blank
+        case request.page_type
+          when 'collection'
+            assign meta_description = 'Shop the ' | append: collection.title | append: ' collection from ' | append: brand_name | append: ': handmade unisex clothing made in Nigeria from traditional Adire, Batik and Nsibidi fabrics.'
+          when 'blog'
+            assign meta_description = 'Stories, style guides and news from ' | append: brand_name | append: ', a handmade Nigerian fashion label working with Adire, Batik and Nsibidi fabrics.'
+        endcase
+      endif
+    -%}
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- unless page_title_upcase contains brand_name_upcase %} | {{ brand_name }}{% endunless -%}
     </title>
 
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+    {% if meta_description != blank %}
+      <meta name="description" content="{{ meta_description | escape }}">
     {% endif %}
 
+    {%- if request.page_type == 'collection' and collection.handle == 'frontpage' -%}
+      <meta name="robots" content="noindex, follow">
+    {%- endif -%}
+
     {% render 'meta-tags' %}
+    {% render 'breadcrumb-schema' %}
 
     <script type="module">
       import * as StandardEvents from 'https://cdn.shopify.com/storefront/standard-events.js';
