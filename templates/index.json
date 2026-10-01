@@ -1,0 +1,196 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "BROWSE THE LATEST DROP OF 2026 FIRE COLLECTION",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP",
+            "button_link": "shopify://collections/winter-fire",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/CJ7A0143.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "fire-collection",
+        "products_to_show": 4,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "image_with_text_daDXcE": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tUjKmE": {
+          "type": "heading",
+          "settings": {
+            "heading": "FREE SHIPPING",
+            "heading_size": "h1"
+          }
+        },
+        "text_qpkXxG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>To all orders in the European Union and United Kingdom (over 80 euros or 70GBP)</p>",
+            "text_style": "body"
+          }
+        },
+        "button_bMRpMc": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tUjKmE",
+        "text_qpkXxG",
+        "button_bMRpMc"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/CJ7A0130.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_AnLMer": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_RnngEx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "winter-fire"
+          }
+        },
+        "featured_collection_yeDpP9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "upcycled-boots-fire-collection"
+          }
+        },
+        "featured_collection_kXtca3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fire-collection"
+          }
+        },
+        "featured_collection_wNPYX6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hoodies"
+          }
+        },
+        "featured_collection_mWeYTn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "shayofixe-collection"
+          }
+        },
+        "featured_collection_xJUc6L": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "taste-of-shayofesch-carousel"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_RnngEx",
+        "featured_collection_yeDpP9",
+        "featured_collection_kXtca3",
+        "featured_collection_wNPYX6",
+        "featured_collection_mWeYTn",
+        "featured_collection_xJUc6L"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image-with-text",
+    "featured_collection",
+    "image_with_text_daDXcE",
+    "collection_list_AnLMer"
+  ]
+}
