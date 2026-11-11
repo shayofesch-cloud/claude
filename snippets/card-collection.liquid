@@ -5,6 +5,7 @@
   - card_collection: {Object} Collection Liquid object
   - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
   - columns: {Number}
+  - columns_mobile: {Number} Columns below 750px (optional, defaults to 1)
   - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
   - wrapper_class: {String} Wrapper class for card (optional)
   - placeholder_image: {String} Placeholder image when collection is empty (optional)
@@ -65,7 +66,7 @@
               sizes="
                 (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
                 (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
-                calc(100vw - 3rem)
+                {% if columns_mobile == 2 %}calc((100vw - 4rem) / 2){% else %}calc(100vw - 3rem){% endif %}
               "
               alt="{{ card_collection.featured_image.alt | escape }}"
               height="{{ card_collection.featured_image.height }}"

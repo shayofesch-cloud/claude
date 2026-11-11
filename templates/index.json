@@ -62,7 +62,7 @@
       "settings": {
         "collection": "fire-collection",
         "products_to_show": 4,
-        "title": "",
+        "title": "Latest drop",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
