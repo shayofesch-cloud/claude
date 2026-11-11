@@ -16,6 +16,11 @@
   .image-with-text__grid--mobile-text-first .image-with-text__text-item {
     order: -1;
   }
+
+  /* Keep the button on the first screen: an h0 heading wraps to 5+ lines on phones */
+  .image-with-text__grid--mobile-text-first .image-with-text__heading.h0 {
+    font-size: calc(var(--font-heading-scale) * 3rem);
+  }
 }
 
 .image-with-text__media {
