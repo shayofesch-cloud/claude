@@ -43,7 +43,8 @@
       <meta name="description" content="{{ meta_description | escape }}">
     {% endif %}
 
-    {%- if request.page_type == 'collection' and collection.handle == 'frontpage' -%}
+    {%- comment -%} Keep the homepage helper collection and empty collections out of search results {%- endcomment -%}
+    {%- if request.page_type == 'collection' and collection.handle == 'frontpage' or request.page_type == 'collection' and collection.all_products_count == 0 -%}
       <meta name="robots" content="noindex, follow">
     {%- endif -%}
 
